@@ -53,7 +53,22 @@ export default function Page() {
 <p className="p-4 font-semibold"> Overview</p>
 <BarChart/>
 </CardContent>
-
+<CardContent className="flex justify-between gap-4">
+          <section>
+            <p>Recent Sales</p>
+            <p className="text-sm text-gray-400">
+              You made 265 sales this month.
+            </p>
+          </section>
+          {userSalesData.map((d, i) => (
+            <SalesCard
+              key={i}
+              email={d.email}
+              name={d.name}
+              saleAmount={d.saleAmount}
+            />
+          ))}
+        </CardContent>
       </section>
     </div>
   );
