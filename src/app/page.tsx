@@ -6,8 +6,8 @@ import PieChartComp from "@/components/PieChartComp";
 import SalesCard from "@/components/SalesCard";
 import { pieChartData, userSalesData } from "@/constant/graphData";
 import { DollarSign, Users, CreditCard, Activity, LineChart } from "lucide-react";
-import Image from "next/image";
-import { it } from "node:test";
+
+
 
 const cardData: CardProps[] = [
   {
@@ -37,6 +37,7 @@ const cardData: CardProps[] = [
 ];
 
 export default function Page() {
+
   return (
     <div className="flex flex-col gap-5  w-full">
     <PageTitle title={"Dashboard"} />
@@ -48,6 +49,7 @@ export default function Page() {
             description={d.description}
             icon={d.icon}
             label={d.label}
+
           />
         ))}
       </section>
