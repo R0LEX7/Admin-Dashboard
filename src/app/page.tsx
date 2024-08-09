@@ -1,9 +1,10 @@
 import BarChart from "@/components/BarChart";
 import CardComp ,  { CardContent, CardProps} from "@/components/CardComp";
+import LineChartComp from "@/components/LineChart";
 import PageTitle from "@/components/PageTitle";
 import SalesCard from "@/components/SalesCard";
 import { userSalesData } from "@/constant/graphData";
-import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
+import { DollarSign, Users, CreditCard, Activity, LineChart } from "lucide-react";
 import Image from "next/image";
 
 const cardData: CardProps[] = [
@@ -57,7 +58,7 @@ export default function Page() {
           <section>
             <p>Recent Sales</p>
             <p className="text-sm text-gray-400">
-              You made 265 sales this month.
+              You made 300% more profit than last year.
             </p>
           </section>
           {userSalesData.map((d, i) => (
@@ -69,6 +70,17 @@ export default function Page() {
             />
           ))}
         </CardContent>
+      </section>
+      <section className="grid grid-cols-1 lg:grid-cols-2 transition-all gap-4">
+<CardContent >
+
+<p className=" font-semibold"> 2023 vs 2024</p>
+<p className="text-sm text-gray-400">
+You made 300% more profit than last year.
+            </p>
+<LineChartComp/>
+</CardContent>
+
       </section>
     </div>
   );
