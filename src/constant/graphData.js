@@ -136,7 +136,7 @@ export const graphData = [
         { name: '35-44', value: 250 },
         { name: '45-54', value: 200 },
         { name: '55+', value: 150 },
-      ];
+      ]
 
 
 

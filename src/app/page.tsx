@@ -2,10 +2,12 @@ import BarChart from "@/components/BarChart";
 import CardComp ,  { CardContent, CardProps} from "@/components/CardComp";
 import LineChartComp from "@/components/LineChart";
 import PageTitle from "@/components/PageTitle";
+import PieChartComp from "@/components/PieChartComp";
 import SalesCard from "@/components/SalesCard";
-import { userSalesData } from "@/constant/graphData";
+import { pieChartData, userSalesData } from "@/constant/graphData";
 import { DollarSign, Users, CreditCard, Activity, LineChart } from "lucide-react";
 import Image from "next/image";
+import { it } from "node:test";
 
 const cardData: CardProps[] = [
   {
@@ -81,6 +83,14 @@ You made 300% more profit than last year.
 <LineChartComp/>
 </CardContent>
 
+        <CardContent className="">
+          <section>
+            <p>Category vs Age Group</p>
+
+
+          </section>
+          <PieChartComp/>
+        </CardContent>
       </section>
     </div>
   );
